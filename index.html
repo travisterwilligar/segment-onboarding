@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+  <head>  
+    <title>Sneakerhead Signup</title>
+    <script>
+        !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="JBuF6NjgOa9QGGL7F9kcDbH1NgJZ4Zax";;analytics.SNIPPET_VERSION="4.15.3";
+        analytics.load("JBuF6NjgOa9QGGL7F9kcDbH1NgJZ4Zax");
+        analytics.page();
+      }}();
+    </script>
+</head> 
+
+<body> 
+<h1>Sign up for the latest information on sneaker drops!</h1> 
+<p>Enter your contact information if you would like to receive alerts about the best sneakers as soon as they drop.</p> 
+<!--Location for users to enter their information to receive the sneakerhead newsletter-->
+<form name="sneakersignup" onsubmit="identify(event)">
+<br>
+Name: <input name="fullname" required="" size="75" type="text"/> 
+<br><br> 
+Email: <input name="email" required="" size="75" type="email"/> 
+<br><br> <input name="submit" type="submit" value="submit"/> </form> 
+
+<script type="text/javascript"> 
+  function identify(e){ 
+
+    e.preventDefault(); 
+    var form = e.target; 
+    var email = form["email"].value; 
+    var fullname = form["fullname"].value; 
+    var user = { 
+      email: email, 
+      name: fullname
+    }; 
+    // Identify call
+//     analytics.identify('12345', { 
+//       email: email, 
+//       name: fullname 
+//     }); 
+    // Sign-up Track call
+//     analytics.track('user signed up', user, function() { 
+//       window.location.href = ""; 
+//     });
+  }
+
+</script> 
+
+</body> 
+</html>

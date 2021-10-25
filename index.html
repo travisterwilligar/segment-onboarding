@@ -42,11 +42,11 @@ Email: <input name="email" required="" size="75" type="email"/>
       window.location.href = ""; 
     });
   }
-  function trackEvent(eventData){
-    analytics.track('test event');
-  }
-  
-  trackEvent();
+
+// Ecommerce Events
+    analytics.track('Products Searched', { 
+     query: 'kith air force 1' 
+    });
 
 </script> 
 

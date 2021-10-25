@@ -47,6 +47,11 @@ Email: <input name="email" required="" size="75" type="email"/>
     analytics.track('Products Searched', { 
      query: 'kith air force 1' 
     });
+ //throw an event violation
+  analytics.track('Foo', { 
+     name: 'test' 
+    });
+
 
 </script> 
 
